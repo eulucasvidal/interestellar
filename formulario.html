@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicons/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Interestellar - Formulario</title>
+</head>
+<body>
+    <header class="header-bg">
+        <div class="header container">
+            <a href="index.html" class="logo">Interestellar</a>
+            <a href="#" class="botaoLogin">login</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="imagemContainer"></div>
+
+        <form action="" class="formulario-bg cor-0"  id="form">
+
+            <div class="formulario font-1-m">
+                <h1 class="formTitulo font-1-l cor-0">Sua escolha é <span>se inscrever.</span> ok, vamos lá</h1>
+                
+                <div class="formItens">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" class="required validName" oninput="validName()">
+                    <span class="span-required">Nome deve ter no mínimo 3 caracteres.</span>
+                </div>
+
+                <div class="formItens">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" class="required" oninput="validEmail()">
+                    <span class="span-required">Digite um email válido.</span>
+                </div>
+
+                <div class="formItens">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" class="required" oninput="validPassword()">
+                    <span class="span-required">Digite uma senha com no mínimo 8 caracteres.</span>
+                </div>
+
+                <div class="formItens">
+                    <label for="senhaCheck">Repita a Senha</label>
+                    <input type="password" id="senhaCheck" name="senhaCheck" class="required" oninput="samePassword()">
+                    <span class="span-required">Senhas devem ser compatíveis.</span>
+                </div>
+
+                <div class="formItens checkbox">
+                    <input type="checkbox" id="termos" name="termos" value="aceito">
+                    <label for="termos">LI e aceito todos os termos.</label>
+                </div>
+
+                <button class="botao" type="submit">cadastrar</button>
+            </div>
+            
+        </form>
+    <script src="js/js-form/formulario.js"></script>
+    </main>
+</body>
+</html>

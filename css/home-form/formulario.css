@@ -1,0 +1,121 @@
+.imagemContainer{
+    background-image: url(../../img/imagens-bg/form-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.formulario-bg{
+    background: var(--cor-4);
+    display: grid;
+    justify-content: center;
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.formTitulo{
+    text-transform: uppercase;
+    max-width: 550px;
+    margin-bottom: 90px;
+}
+
+.formItens{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+label{
+    display: block;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+input{
+    padding: 5px;
+    font-size: 1.1rem;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    color: var(--cor-0);
+    outline: 0;
+}
+
+.span-required{
+    display: none;
+    color: var(--cor-3);
+    font-size: 0.8rem;
+    margin: 3px 0px 0px 0px;
+}
+
+.checkbox{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox label{
+    margin: 0px;
+    display: grid;
+}
+
+.checkbox input{
+    margin: 0px;
+    width: 15px;
+    height: 15px;
+}
+
+.formButton{
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 15px 50px;
+    border: none;
+    background: #CD8560;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition:.6s;
+}
+.formButton:hover{
+    background: #FFFFFF;
+    border: 2px solid #CD8560;
+    color: #CD8560;
+    letter-spacing: 5px;
+}
+@media(max-width:1050px){
+    .imagemContainer{
+        display: none;
+    }
+    .main{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:650px){
+    .formulario{
+        grid-template-columns: 350px;
+    }
+    .formTitulo{
+        max-width: 350px;
+    }
+    .font-1-l{
+        font-size: 1.9rem;
+    }
+}
+@media(max-width:450px){
+    .formItens{
+        grid-template-columns: 300px;
+        justify-content: center;
+    }
+}
