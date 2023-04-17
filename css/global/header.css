@@ -1,0 +1,152 @@
+/* Configurações globais do Header Introdução/Formulario */
+
+.header-bg{
+    background: linear-gradient(45deg, #000000,#180d24);
+}
+
+.header{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.logo{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+}
+
+/* Configurações do menu no Header Introdução */
+.menu{
+    display: flex;
+    gap: 30px;
+}
+
+.menu a{
+    display: block;
+    padding: 10px 20px;
+    color: var(--cor-0);
+    transition: .6s;
+    border-bottom: 2px solid transparent;
+}
+
+.menu a:hover{
+    background: var(--cor-5);
+    color: var(--cor-1);
+    border-color:  var(--cor-1);
+}
+
+.botaoMobile {
+    display: none;
+}
+@media(max-width:1000px){
+    .menu{
+        gap: 10px;
+    }
+}
+
+@media (max-width:800px){
+
+    .menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 100px;
+        right: 0px;
+        height: 0px;
+        background: linear-gradient(45deg, #000000ec,#180d24e7);
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+        transition: .6s;
+    }
+
+    .menuNav.active .menu{
+        height:100vh;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .menu a{
+        text-align: center;
+        border-bottom: 2px solid #5555552f;
+        padding: 25px;
+    }
+
+    .botaoMobile {
+        display: flex;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: var(--cor-0);
+    }
+    
+    .menuHamburguer{
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+        color: var(--cor-0);
+    }
+
+    .menuHamburguer::after,.menuHamburguer::before{
+        content: '';
+        display: block;
+        height: 2px;
+        width: 20px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .6s;
+        position: relative;
+    }
+
+    .menuNav.active .menuHamburguer{
+        border-top-color:transparent ;
+    }
+
+    .menuNav.active .menuHamburguer::before{
+        transform: rotate(135deg);
+    }
+
+    .menuNav.active .menuHamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+@media(max-width:400px){
+    .logo{
+        font-size: 1.2rem;
+    }
+}
+
+/* Configurações do botao no Header Formulario */
+
+.botaoLogin{
+    color: var(--cor-0);
+    text-transform: uppercase;
+    border: 2px solid var(--cor-1);
+    padding: 5px 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .6s;
+}
+
+.botaoLogin:hover{
+    background: var(--cor-1);
+    letter-spacing: 5px;
+}
+@media(max-width:450px){
+    .logo{
+        font-size: 1.2rem;
+    }
+    .botaoLogin{
+        padding: 5px 15px;
+    }
+    .botaoLogin:hover{
+    letter-spacing: 0px;
+    }   
+}

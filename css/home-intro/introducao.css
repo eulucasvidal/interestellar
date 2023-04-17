@@ -1,0 +1,49 @@
+.introducao-bg{
+    background: url(../../img/imagens-bg/intro-bg.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.introducao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    height: 80vh;
+}
+
+.introducao h1{
+    text-transform: uppercase;
+    max-width:600px;
+    text-shadow: 0px 22px 40px #000;
+}
+
+.introducao h2{
+    max-width: 435px;
+    text-shadow: 0px 22px 40px #000;
+}
+
+@media (max-width:800px){
+    .introducao{
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    .introducao h1{
+        max-width: 500px;
+    }
+    .font-1-xl{
+        font-size: 3rem;
+        max-width:500px;
+    }
+}
+
+@media (max-width:400px){
+    .font-1-xl{
+        font-size: 2.1rem;
+    }
+    .font-1-m{
+        font-size: 0.9rem;
+    }
+}

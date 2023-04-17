@@ -1,0 +1,26 @@
+.container{
+    box-sizing: border-box;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+.botao{
+    background:#FF986D;
+    color: #FFFFFF;
+    width: 200px;
+    height:80px;
+    font-size: 1.3rem;
+    font-weight:600;
+    letter-spacing: 0.1px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition:.7s ease-out;
+}
+
+.botao:hover{
+    background: linear-gradient(45deg, #000000,#180d24);
+    color: #CD8560;
+    border-color: #CD8560;
+}

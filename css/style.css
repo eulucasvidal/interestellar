@@ -1,0 +1,15 @@
+@import './global/global.css';
+
+@import './global/header.css';
+
+/* Utilidades */
+@import './utilidades/componentes.css';
+@import './utilidades/tipografia.css';
+@import './utilidades/cores.css';
+
+
+/* HOME INTRODUÇÃO */
+@import './home-intro/introducao.css';
+@import './home-intro/footer.css';
+
+/* HOME FORMULARIO */
